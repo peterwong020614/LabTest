@@ -18,8 +18,9 @@
                 <Label x:Name="label2" Grid.Row="1"
                        Grid.ColumnSpan="2"
                        HorizontalOptions="CenterAndExpand"/>
-
             </Grid>
+            <Button x:Name="Question2Btn"
+                    Text="GotoQuestion2"/>
         </StackLayout>
     </ScrollView>
 

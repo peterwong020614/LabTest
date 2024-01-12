@@ -14,8 +14,8 @@
                 MinimumTrackColor = Colors.Blue,
                 MaximumTrackColor = Colors.Gray,
                 ThumbColor = Colors.Pink,
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.FillAndExpand
+                HorizontalOptions = LayoutOptions.Fill,
+                VerticalOptions = LayoutOptions.Center
             };
 
             label1 = new Label
@@ -37,14 +37,14 @@
 
             // Subscribe to the ValueChanged event of the slider
             slider1.ValueChanged += OnSliderValueChanged;
-
-            // Create a stack layout and add the slider and label to it
             var stackLayout = new StackLayout
-            { 
-                Children = { slider1, label1 ,label2 }
+            {
+                
+                VerticalOptions = LayoutOptions.Center,
+                
+            Children = { slider1, label1, label2 }
             };
 
-            
             Content = stackLayout;
         }
         private void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
@@ -68,6 +68,8 @@
             }
         }
 
-    }
+        
 
+    }
+    
 }
